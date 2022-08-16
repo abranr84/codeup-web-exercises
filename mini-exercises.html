@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Exercises</title>
+</head>
+<body>
+  <script>
+    function numberDivisibleBy7Or3(number) {
+      if (number % 3 === 0 || number % 7 === 0) {
+        return "True";
+      } else {
+        return "False"
+      }
+    }
+
+    function numberDivisibleBy2Or3(number) {
+      if (number % 2 === 0 || number % 3 === 0) {
+        return "True";
+      } else {
+        return "False";
+      }
+    }
+
+    function numberIsOddAndDivisibleBy3(number) {
+        if (number / 3 && number % 2 !== 0) {
+            return "True";
+        } else {
+            if (number % 2 === 0) {
+                return "False";
+            }
+        }
+    }
+
+    function fullName() {
+        let a = "First ";
+        let b = "Middle ";
+        let c = "Last";
+        return ( a + b + c );
+    }
+
+    function address() {
+        let a = "House number ";
+        let b = "Street name, ";
+        let c = "city, ";
+        let d = "state. ";
+        let e = "zip";
+        return ( a + b + c + d + e );
+    }
+
+    let text = " Please don't get in my lane! "
+    console.log(text.toUpperCase())
+
+    console.log(text.toLowerCase())
+
+    console.log(text.trim())
+
+    console.log(text.length)
+
+    console.log(text.charAt(1))
+
+    let string = "Hello!"
+    index = string.indexOf("e")
+
+    console.log(index)
+
+    let str = "I loved my truck. I'm going to miss it. Her name was Crazy Eyed Christy. She was named that cause one headlight was blue and the other standard."
+    index = str.indexOf("H");
+
+    console.log(index)
+
+    console.log(str.slice(0, 22));
+
+    const cars = []
+    cars[0] = "a '96 Chevy Cheyenne";
+    cars[1] = " '04 Jeep Liberty Renegade";
+    cars[2] = " '08 Ford Edge";
+    cars[3] = " '13 Mitsubishi Outlander";
+    cars[4] = " '17 Mitsubishi Mirage";
+    cars[5] = " '08 Chevy Avalanche";
+    cars[6] = " '15 Dodge Durange";
+    cars[7] = " '19 Dodge Caravan GT";
+    cars[8] = " Yet to purchase.";
+
+    [cars[3], cars[4]] = [cars[4], cars[3]];
+
+    console.log("These are the vehicles I have owned so far, " + cars)
+//Mistake on order of cars. The mirage needs to be before the Outlander
+
+    function temperature(x) {
+        if (x === x) ;
+        {
+            return "Is this °C of °F?";
+        }
+    }
+    let number = 67
+    number = number - 32 * 5 / 9
+    console.log((number.toFixed(2)) + "°c")
+
+    let string1 = "Abran Estrada Rodriguez"
+    console.log(string1.replace( "Abran" , "Estrada"));
+
+  </script>
+
+</body>
+</html>
