@@ -113,7 +113,7 @@
 
 //3
 // for (let i = 1; i <= 10; i++) {
-//     let i = Math.ceil(Math.random() * 180) + 21;
+//     let i = Math.ceil(Math.random() * 181) + 20;
 //     if (i % 2 === 0) {
 //         console.log(`${i} is even`);
 //     } else {
@@ -121,7 +121,30 @@
 //     }
 // }
 
-//4
+// 4 Found answer online
+// let n = 9;
+// let string = "";
+// for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= i; j++) {
+//         string += i;
+//     }
+//     string += "\n";
+// }
+// console.log(string);
+
+//Javier's examples pyramid
+//String.prototype.repeat()
+// for (i = 1; i <= 9; i++) {
+//     console.log(i.toString().repeat(i));
+// }
+
+// for(let i = 1; i <= 9; i++) {
+//     let outputString = "";
+//     for (let count = 0; count < i; count++) {
+//         outputString = outputString + i;
+//     }
+//     console.log(outputString);
+// }
 
 
 //5
