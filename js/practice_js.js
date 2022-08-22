@@ -75,10 +75,12 @@ function multiplyByTwo(number){
 }
 
 let multipliedNumbers = numbers.map(multiplyByTwo);
-console.log(multipliedNumbers);
+console.log(multipliedNumbers); //prints out: 6, 10, 16, 18, 4
 
 //Using ES6 arrow functions
 const multiplyByTwo = number => number * 2;
 
 let multipliedNumbers = numbers.map(multiplyByTwo);
-console.log(multipliedNumbers);
+console.log(multipliedNumbers); //prints out: 6, 10, 16, 18, 4
+
+
