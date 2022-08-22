@@ -1,206 +1,151 @@
-// let currentWeather = {//object between the curly braces
-//     humidity : 77,//properties
-//     temp:82.33,
-//     feels_like: 88.79,
-//     clouds: 75,
-//     description: "cloudy"
-// }
-//.notation
-// console.log(currentWeather.temp);
-// console.log(currentWeather.description);
-// console.log(currentWeather.feels_like);
-//
-// //Another way to access properties - able to use variables []bracket notation
-// console.log(currentWeather["humidity"]);
-// let userChoice = "clouds";
-// console.log(currentWeather[userChoice]);
-// userChoice = "temp";
-// console.log(currentWeather[userChoice]);
+(function() {
+    "use strict";
 
-
-//You can do anything to an obect property that you can do to any other variable
-// console.log("The current weather is " + currentWeather.temp);
-// if (currentWeather.temp > 95){
-//     console.log("It's kind of hot");
-// } else {
-//     console.log("It's cool today for Texas");
-// }
-//
-// //Loop through an array using for in loop
-// for (let property in currentWeather){
-//     console.log(property + ": " + currentWeather[property]);
-// }
-//
-// //Dynamically add new properties to existing objects
-// currentWeather.uvIndex = 9.79;
-// console.log(currentWeather.uvIndex);
-
-//Arrays of objects
-//An array with elements
-//very common data structure
-
-// let hourlyWeather = [
-//     {//object without a name
-//         time: "08:00",//properties
-//         temperature: 78.91,
-//         feels_like: 78.91
-//     },
-//     {
-//         time: "09:00",
-//         temperature: 79.57,
-//         feels_like: 79.57
-//     },
-//     {
-//         time: "10:00",
-//         temperature: 81.46,
-//         feels_like: 86.04
-//     },
-//     {
-//         time: "11:00",
-//         temperature: 84.49,
-//         feels_like: 89.24
-//     }
-// ];
-//hourlyWeather[0] - in the console
-//hourlyWeather[0].time - able to use . notation - in the console
-//loop over an array of objects
-//For loop
-//Don't have to -1 since it is less than the length of the hourlyWeather
-// for (let i = 0; i < hourlyWeather.length; i++){
-//     console.log(`At ${hourlyWeather[i].time} the temperature will be ${hourlyWeather[i].temperature}`);
-// }
-
-//forEach
-//Don't need to use the "i" counter
-//forEach know to start at 0 - built in to the forEach
-//simpler syntax
-// hourlyWeather.forEach(function(forecast){
-//     console.log(`At ${forecast.time} the temperature will be ${forecast.temperature} and feels like ${forecast.feels_like}`);
-// })
-//
-// //forEach arrow function
-// hourlyWeather.forEach(forecast =>
-//     console.log(`At ${forecast.time} the temperature will be ${forecast.temperature} and feels like ${forecast.feels_like}`));
-
-//Break out of forEach - complicate things and advantages are diminished
-// hourlyWeather.forEach(function(forecast, index){
-//     if (forecast.temperature > 80){
-//         console.log("Too hot!");
-//         return false;
-//     }
-//     console.log(`At ${forecast.time} the temperature will be ${forecast.temperature} and feels like ${forecast.feels_like}`);
-// })
-
-//Array of objects with objects inside
-
-// let texasInfo = [
-//     {
-//         city: "San Antonio",
-//         latitude: 29.423017,
-//         longitude: -98.48527,
-//         timezone: "America/Chicago",
-//         currentWeather: {
-//             humidity: 77,
-//             temp: 82.33,
-//             feels_like: 88.79,
-//             clouds: 75
-//         }
-//     },
-//     {
-//         city: "Houston",
-//         latitude: 29.7915,
-//         longitude: -95.093,
-//         timezone: "America/Chicago",
-//         currentWeather: {
-//             humidity: 68,
-//             temp: 87.44,
-//             feels_like: 97.7,
-//             clouds: 75
-//         }
-//     }
-// ];
-//
-// //in log
-// // texasInfo[0].currentWeather.temp
-//
-// console.log("The temperature in " + texasInfo[1].city + " is " + texasInfo[1].currentWeather.temp);
-
-
-
-let fighter = {
-    name: "Arata",
-    hitPoints: 18,
-    maxDamage: 8
-}
-//fighter.attack();
-//monster.attack();
-
-
-//     attack: function(opponent){
-//         console.log(opponent.name + " has " + opponent.hitPoints + " hit points.");
-//         console.log(this.name + " attacks!");
-//         let damage = Math.ceil(Math.random() * this.maxDamage);
-//         opponent.hitPoints -= damage;
-//         console.log(this.name + " does " + damage + " points of damage");
-//         console.log(opponent.name + " now has " + opponent.hitPoints + " hit points.");
-//     }
-// }
-
-//Can not use arrow functions as method definitions
-
-let monster = {
-    name: "Goblin",
-    hitPoints: 8,
-    maxDamage:6,
-    attack: function(){
-        console.log(this.name + " attacks!");
+    /**
+     * TODO:
+     * Create an object with firstName and lastName properties that are strings
+     * with your first and last name. Store this object in a variable named
+     * `person`.
+     *
+     * Example:
+     *  > console.log(person.firstName) // "Rick"
+     *  > console.log(person.lastName) // "Sanchez"
+     */
+    let person = {
+        firstName: "Abran",
+        lastName: "Rodriguez",
+        sayHello: function(){
+            return `Hello from ${person.firstName} ${person.lastName}!`
+        }
     }
-}
 
-//attack method is repeated - No bueno
 
-//Let's create a controller object to handle anything players or game objects do that affects the state of the game. The controller  might handle taking user input and calculating the input's effect on the game.
+    console.log(person.firstName);
+    console.log(person.lastName);
+    /**
+     * TODO:
+     * Add a sayHello method to the person object that returns a greeting using
+     * the firstName and lastName properties.
+     * console.log the returned message to check your work
+     *
+     * Example
+     * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
+     */
+    console.log(person.sayHello());
 
-//Next thing to change is console.log
 
-let controller = {
-    attack: function(attacker, defender){
-        let defenderHpBeforeAttack = defender.hitPoints;
-        let damage = Math.ceil(Math.random() * attacker.maxDamage);
-        defender.hitPoints -= damage;
-        view.displayAttackResults(attacker, defender, defenderHpBeforeAttack, damage);
+
+    /** TODO:
+     * HEB has an offer for the shoppers that buy products amounting to
+     * more than $200. If a shopper spends more than $200, they get a 12%
+     * discount. Write a JS program, using conditionals, that logs to the
+     * browser, how much Ryan, Cameron and George need to pay. We know that
+     * Cameron bought $180, Ryan $250 and George $320. Your program will have to
+     * display a line with the name of the person, the amount before the
+     * discount, the discount, if any, and the amount after the discount.
+     *
+     * Uncomment the lines below to create an array of objects where each object
+     * represents one shopper. Use a foreach loop to iterate through the array,
+     * and console.log the relevant messages for each person
+     */
+
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    // function discountOffer(shoppers){
+    //     for (let i = 0; i < shoppers.length; i++)
+    //     if (shoppers[i].amount > 200){
+    //         let discount = shoppers[i].amount * .12;
+    //         console.log(`${shoppers[i].name}, total before discount is ${shoppers[i].amount}, discount is ${discount[i]}, new total is ${shoppers[i].amount - discount}.`)
+    //     } else if (shoppers.amount < 200){
+    //         console.log(`${shoppers[i].name}, total before discount is ${shoppers[i].amount}, did not meet requirements for discount, total is ${shoppers[i].amount}.`)
+    //     }
+    // }
+
+    //Joshua's help
+    function applyDiscount(discount) {
+        for (let i = 0; i < shoppers.length; i++) {
+            if (shoppers[i].amount > 200) {
+                let discountApplied =  shoppers[i].amount - (discount * shoppers[i].amount);
+                let discountAmount = shoppers[i].amount * discount
+                console.log(` ${shoppers[i].name}'s Total is: ${shoppers[i].amount} \n discount applied is: ${discountAmount}\n amount after discount: ${discountApplied} `);
+            } else {
+                console.log(` ${shoppers[i].name}'s Total is: ${shoppers[i].amount} \n discount applied is: 0\n amount after discount: ${shoppers[i].amount} `)
+            }
+        }
     }
-}
 
-//The view object handles output
-
-let view = {
-    displayAttackResults: function(attacker, defender, defenderHpBeforeAttack, damage){
-        console.log(`${defender.name} has ${defenderHpBeforeAttack} hit points.`);
-        console.log(`${attacker.name} attacks!`);
-        console.log(`${attacker.name} does ${damage} hit points of damage!`);
-        console.log(`${defender.name} now has ${defenderHpBeforeAttack - damage} hit points.`);
-        console.log("-----------");
-    }
-}
-
-controller.attack(fighter, monster);
-controller.attack(monster, fighter);
+    console.log(applyDiscount(.12));
 
 
-let model = {
-    fighter: {
-        name: "Arata",
-        hitPoints: 18,
-        maxDamage: 8
-    },
+    /** TODO:
+     * Create an array of objects that represent books and store it in a
+     * variable named `books`. Each object should have a title and an author
+     * property. The author property should be an object with properties
+     * `firstName` and `lastName`. Be creative and add at least 5 books to the
+     * array
+     *
+     * Example:
+     * > console.log(books[0].title) // "The Salmon of Doubt"
+     * > console.log(books[0].author.firstName) // "Douglas"
+     * > console.log(books[0].author.lastName) // "Adams"
+     */
+    let books = [
+        {book: 1, title: "The Salmon of Doubt", author: {firstName: "Douglas", lastName: "Adams"}
+        },
+        {book: 2, title: "The Da Vinci Code", author: {firstName: "Dan", lastName: "Brown"}
+        },
+        {book: 3, title: "Angels & Demons", author: {firstName: "Dan", lastName: "Brown"}
+        },
+        {book: 4, title: "Dracula", author: {firstName: "Bram", lastName: "Stoker"}
+        },
+        {book: 5, title: "It", author: {firstName: "Stephen", lastName: "King"
+        }
+        }
+];
 
-    monster: {
-        name: "Goblin",
-        hitPoints:8,
-        maxDamage: 6
-    }
-}
+    console.log(books[0].title);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName);
+    /**
+     * TODO:
+     * Loop through the books array and output the following information about
+     * each book:
+     * - the book number (use the index of the book in the array)
+     * - the book title
+     * - author's full name (first name + last name)
+     *
+     * Example Console Output:
+     *
+     *      Book # 1
+     *      Title: The Salmon of Doubt
+     *      Author: Douglas Adams
+     *      ---
+     *      Book # 2
+     *      Title: Walkaway
+     *      Author: Cory Doctorow
+     *      ---
+     *      Book # 3
+     *      Title: A Brief History of Time
+     *      Author: Stephen Hawking
+     *      ---
+     *      ...
+     */
+    books.forEach(function(books,title,author){
+        console.log(`Book # ${books.book} \n Title: ${books.title} \n Author: ${books.author.firstName + " " + books.author.lastName} \n ---`)
+    })
+    /**
+     * Bonus:
+     * - Create a function named `createBook` that accepts a title and author
+     *   name and returns a book object with the properties described
+     *   previously. Refactor your code that creates the books array to instead
+     *   use your function.
+     * - Create a function named `showBookInfo` that accepts a book object and
+     *   outputs the information described above. Refactor your loop to use your
+     *   `showBookInfo` function.
+     */
 
-controller.attack(model.fighter, model.monster);
-controller.attack(model.monster, model.fighter);
+})();
