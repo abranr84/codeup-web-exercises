@@ -53,3 +53,32 @@
 //         alert(`${y} is greater than ${x}.`);
 //     }
 // }
+
+// switch(fruits) {
+//     case "Banana":
+//         alert("Hello")
+//         break;
+//     case "Apple":
+//         alert("Welcome")
+//         break;
+//            default:
+//                alert("Neither");
+// }
+
+// const greet = (name) => { return "Hello " + name + "!"; }
+// console.log(greet("Eric"));
+
+let numbers = [3, 5, 8, 9, 2];
+//Old way
+function multiplyByTwo(number){
+    return number * 2;
+}
+
+let multipliedNumbers = numbers.map(multiplyByTwo);
+console.log(multipliedNumbers);
+
+//Using ES6 arrow functions
+const multiplyByTwo = number => number * 2;
+
+let multipliedNumbers = numbers.map(multiplyByTwo);
+console.log(multipliedNumbers);
