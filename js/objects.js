@@ -15,6 +15,7 @@
         firstName: "Abran",
         lastName: "Rodriguez",
         sayHello: function(){
+            //return `Hello from ${this.firstName} ${this.lastName}`;
             return `Hello from ${person.firstName} ${person.lastName}!`
         }
     }
@@ -55,6 +56,13 @@
         {name: 'George', amount: 320}
     ];
 
+    //Javier example
+    shoppers.forEach(function(shopper){
+        let discount = (shopper.amount > 200 ? shopper.amount * .12 : 0).toFixed(2);
+        let total = (shopper.amount - discount).toFixed(2);
+        console.log(`${shopper.name} -- total: $${shopper.amount}, discount: $${discount}, final amount: $${total}`);
+    })
+
     // function discountOffer(shoppers){
     //     for (let i = 0; i < shoppers.length; i++)
     //     if (shoppers[i].amount > 200){
@@ -66,20 +74,19 @@
     // }
 
     //Joshua's help
-    function applyDiscount(discount) {
-        for (let i = 0; i < shoppers.length; i++) {
-            if (shoppers[i].amount > 200) {
-                let discountApplied =  shoppers[i].amount - (discount * shoppers[i].amount);
-                let discountAmount = shoppers[i].amount * discount
-                console.log(` ${shoppers[i].name}'s Total is: ${shoppers[i].amount} \n discount applied is: ${discountAmount}\n amount after discount: ${discountApplied} `);
-            } else {
-                console.log(` ${shoppers[i].name}'s Total is: ${shoppers[i].amount} \n discount applied is: 0\n amount after discount: ${shoppers[i].amount} `)
-            }
-        }
-    }
+    // function applyDiscount(discount) {
+    //     for (let i = 0; i < shoppers.length; i++) {
+    //         if (shoppers[i].amount > 200) {
+    //             let discountApplied =  shoppers[i].amount - (discount * shoppers[i].amount);
+    //             let discountAmount = shoppers[i].amount * discount
+    //             console.log(` ${shoppers[i].name}'s Total is: ${shoppers[i].amount} \n discount applied is: ${discountAmount}\n amount after discount: ${discountApplied} `);
+    //         } else {
+    //             console.log(` ${shoppers[i].name}'s Total is: ${shoppers[i].amount} \n discount applied is: 0\n amount after discount: ${shoppers[i].amount} `)
+    //         }
+    //     }
+    // }
 
-    console.log(applyDiscount(.12));
-
+    // console.log(applyDiscount(.12));
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -134,9 +141,21 @@
      *      ---
      *      ...
      */
-    books.forEach(function(books,title,author){
-        console.log(`Book # ${books.book} \n Title: ${books.title} \n Author: ${books.author.firstName + " " + books.author.lastName} \n ---`)
-    })
+
+    // books.forEach(function(book,index){
+    //     console.log("Book # " + (index + 1));
+    //     console.log("Title: " + book.title);
+    //     console.log(`Author : ${book.author.firstName} ${book.author.lastName}`);
+    //     console.log("---");
+    // })
+
+    //Javier example
+    for (let i = 0; i < books.length; i++){
+        console.log("Book # " + (i + 1));
+        console.log("Title: " + books.[i].title);
+        console.log(`Author: ${books[i].author}`)
+    }
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -148,4 +167,43 @@
      *   `showBookInfo` function.
      */
 
+    function createBook(title, firstName, lastName){
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+    let nineteenEightyFour = new Book("1984", "George", "Orwell");
+
+    books.push(createBook("The Great Gatsby", "F. Scott", "Fitzgerald"));
+
+    function Book(title, firstName, lastName){
+        this.title = title;
+        this.author = {
+            firstName: firstName,
+            lastName: lastName
+        }
+    }
+
+    // books.forEach(function(book,index){
+    //     console.log("Book # " + (index + 1));
+    //     console.log("Title: " + book.title);
+    //     console.log(`Author : ${book.author.firstName} ${book.author.lastName}`);
+    //     console.log("---");
+    // })
+
+    function showBookInfo(book, index){
+        console.log("Title: " + book.title);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+        console.log("---");
+    }
+
+    books.forEach(function(book, index){
+        //console.log("Book # " + (index + 1));
+        showBookInfo(book, index);
+    });
 })();

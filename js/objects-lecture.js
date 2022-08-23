@@ -127,11 +127,11 @@
 
 
 
-let fighter = {
-    name: "Arata",
-    hitPoints: 18,
-    maxDamage: 8
-}
+// let fighter = {
+//     name: "Arata",
+//     hitPoints: 18,
+//     maxDamage: 8
+// }
 //fighter.attack();
 //monster.attack();
 
@@ -148,14 +148,14 @@ let fighter = {
 
 //Can not use arrow functions as method definitions
 
-let monster = {
-    name: "Goblin",
-    hitPoints: 8,
-    maxDamage:6,
-    attack: function(){
-        console.log(this.name + " attacks!");
-    }
-}
+// let monster = {
+//     name: "Goblin",
+//     hitPoints: 8,
+//     maxDamage:6,
+//     attack: function(){
+//         console.log(this.name + " attacks!");
+//     }
+// }
 
 //attack method is repeated - No bueno
 
@@ -163,77 +163,103 @@ let monster = {
 
 //Next thing to change is console.log
 
-let controller = {
-    attack: function(attacker, defender){
-        let defenderHpBeforeAttack = defender.hitPoints;
-        let damage = Math.ceil(Math.random() * attacker.maxDamage);
-        defender.hitPoints -= damage;
-        view.displayAttackResults(attacker, defender, defenderHpBeforeAttack, damage);
-    }
-}
-
-//The view object handles output
-
-let view = {
-    displayAttackResults: function(attacker, defender, defenderHpBeforeAttack, damage){
-        console.log(`${defender.name} has ${defenderHpBeforeAttack} hit points.`);
-        console.log(`${attacker.name} attacks!`);
-        console.log(`${attacker.name} does ${damage} hit points of damage!`);
-        console.log(`${defender.name} now has ${defenderHpBeforeAttack - damage} hit points.`);
-        console.log("-----------");
-    }
-}
-
-controller.attack(fighter, monster);
-controller.attack(monster, fighter);
-
-
-let model = {
-    fighter: {
-        name: "Arata",
-        hitPoints: 18,
-        maxDamage: 8
-    },
-
-    monster: {
-        name: "Goblin",
-        hitPoints:8,
-        maxDamage: 6
-    }
-}
-
-controller.attack(model.fighter, model.monster);
-controller.attack(model.monster, model.fighter);
+// let controller = {
+//     attack: function(attacker, defender){
+//         let defenderHpBeforeAttack = defender.hitPoints;
+//         let damage = Math.ceil(Math.random() * attacker.maxDamage);
+//         defender.hitPoints -= damage;
+//         view.displayAttackResults(attacker, defender, defenderHpBeforeAttack, damage);
+//     }
+// }
+//
+// //The view object handles output
+//
+// let view = {
+//     displayAttackResults: function(attacker, defender, defenderHpBeforeAttack, damage){
+//         console.log(`${defender.name} has ${defenderHpBeforeAttack} hit points.`);
+//         console.log(`${attacker.name} attacks!`);
+//         console.log(`${attacker.name} does ${damage} hit points of damage!`);
+//         console.log(`${defender.name} now has ${defenderHpBeforeAttack - damage} hit points.`);
+//         console.log("-----------");
+//     }
+// }
+//
+// controller.attack(fighter, monster);
+// controller.attack(monster, fighter);
+//
+//
+// let model = {
+//     fighter: {
+//         name: "Arata",
+//         hitPoints: 18,
+//         maxDamage: 8
+//     },
+//
+//     monster: {
+//         name: "Goblin",
+//         hitPoints:8,
+//         maxDamage: 6
+//     }
+// }
+//
+// controller.attack(model.fighter, model.monster);
+// controller.attack(model.monster, model.fighter);
 
 //Creating objects
 //define an empty object and create properties dynamically
-let goblin = {};
-goblin.name = "Goblin";
+// let goblin = {};
+// goblin.name = "Goblin";
 
 //create a function that returns objects
 
-function makeMonster(name, hitPoints, maxDamage){
-    return {
-        name: name,
-        hitPoints: hitPoints,
-        maxDamage: maxDamage
-    }
-}
+// function makeMonster(name, hitPoints, maxDamage){
+//     return {
+//         name: name,
+//         hitPoints: hitPoints,
+//         maxDamage: maxDamage
+//     }
+// }
 
 // model.hobgoblin = makeMonster("Hobgoblin", 11, 11);
 // controller.attack(model.hobgoblin, model.fighter);
 
 //use an object constructor
 //constructor uses semicolons
-function Monster(name, hitPoints, maxDamage){
-    this.name = name;
-    this.hitPoints = hitPoints;
-    this.maxDamage = maxDamage;
+// function Monster(name, hitPoints, maxDamage){
+//     this.name = name;
+//     this.hitPoints = hitPoints;
+//     this.maxDamage = maxDamage;
+// }
+// //name is capitalized when adding
+// model.hobgoblinCaptain = new Monster("Hobgoblin Captain", 39, 14);
+//
+// controller.attack(model.hobgoblinCaptain, model.fighter);
+//
+// for (let property in model){
+//     console.log(model[property].name);
+// }
+
+const car = {
+    make: "Toyota",
+    model: "Tacoma",
+    year: 2019,
+    mileage: 12657
 }
-//name is capitalized when adding
-model.hobgoblinCaptain = new Monster("Hobgoblin Captain", 39, 14);
 
-controller.attack(model.hobgoblinCaptain, model.fighter);
+// let make = car.make;
+// let carModel = car.model;
+//
+// console.log(make);
+// console.log(carModel);
 
-for (let property in model){
-    console.log(model[property].name);
+//Object deconstruction
+
+const {make, model, year, mileage} = car;
+console.log(make);
+console.log(model);
+console.log(year);
+console.log(mileage);
+
+//No longer need to .notation with destruction in the pararmeter
+const outputCarInfo = ({make, model, year, mileage} = car) => {console.log(`${year} ${make} ${model} with ${mileage}`)}
+outputCarInfo(car);
