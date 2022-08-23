@@ -68,19 +68,21 @@
 // const greet = (name) => { return "Hello " + name + "!"; }
 // console.log(greet("Eric"));
 
-let numbers = [3, 5, 8, 9, 2];
+// let numbers = [3, 5, 8, 9, 2];
 //Old way
-function multiplyByTwo(number){
-    return number * 2;
-}
+// function multiplyByTwo(number){
+//     return number * 2;
+// }
+//
+// let multipliedNumbers = numbers.map(multiplyByTwo);
+// console.log(multipliedNumbers); //prints out: 6, 10, 16, 18, 4
+//
+// //Using ES6 arrow functions
+// const multiplyByTwo = number => number * 2;
+//
+// let multipliedNumbers = numbers.map(multiplyByTwo);
+// console.log(multipliedNumbers); //prints out: 6, 10, 16, 18, 4
 
-let multipliedNumbers = numbers.map(multiplyByTwo);
-console.log(multipliedNumbers); //prints out: 6, 10, 16, 18, 4
-
-//Using ES6 arrow functions
-const multiplyByTwo = number => number * 2;
-
-let multipliedNumbers = numbers.map(multiplyByTwo);
-console.log(multipliedNumbers); //prints out: 6, 10, 16, 18, 4
-
-
+// const divideByThree = number => number / 3;
+// const sayHello = name => `Hello ${name}!`;
+// const isGreater = (numb1, numb2) => numb1 > numb2 ? `${numb1} is greater than ${numb2}.` : `${numb2} is greater than ${numb1}.`;
