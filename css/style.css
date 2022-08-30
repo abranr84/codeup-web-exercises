@@ -1,5 +1,10 @@
+body {
+    background-color: #e5ecf6;
+}
+
 h1 {
     color: #a11e1e;
+    text-align: center;
 }
 .fancy-header {
     color: #0a3994;

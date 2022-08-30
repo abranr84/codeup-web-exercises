@@ -10,6 +10,15 @@ h2 {
     border-bottom: 1px solid antiquewhite;
 }
 
-#prices {
-    border-bottom: 1px solid pink;
+/*Class*/
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+/*rem - relative em height-1.1 times default font size*/
+li.italic {
+    font-size: 1.1rem;
 }

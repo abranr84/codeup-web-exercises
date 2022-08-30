@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Intro to HTML</title>
+        <link rel="icon" href="img/codeup-logo-with-Codey.png">
         <link rel="stylesheet" href="css/site.css">
         <link rel="stylesheet" href="css/intro-to-css.css">
     </head>
@@ -16,16 +17,17 @@
 <!--6 levels of heading -->
         <main>
             <section>
-                <p>I am a full stack web developer with experience in Spring Boot, LAMP stack, Ruby on Rails, and React with Firebase.</p>
+                <p>I am a full stack web developer with experience in <span class="italic">Spring Boot</span>, <span class="italic">LAMP</span>  stack, <span class="italic">Ruby on Rails</span>, and <span class="italic">React</span> with Firebase.</p>
                 <p>My specialty is ensuring a seamless flow of information between robust back ends and highly usable front ends.</p>
             </section>
             <section id="languages">
                 <h2>Languages</h2>
                 <ul>
+<!-- Class can have multiple elements -->
                     <li>JavaScript</li>
-                    <li>Java</li>
+                    <li class="bold">Java</li>
                     <li>PHP</li>
-                    <li>Ruby</li>
+                    <li class="bold italic">Ruby</li>
                     <li>SQL</li>
                 </ul>
             </section>
@@ -40,6 +42,7 @@
                 </ol>
             <section>
                 <table>
+<!-- ID can only give to one element -->
                     <h2 id="prices">Prices</h2>
                     <tr>
                         <th>Service</th>

@@ -2,7 +2,11 @@
 a {
     color: azure;
 }
-
+/*ID*/
 #prices {
     border-bottom: 1px solid pink;
+}
+/*Class*/
+.bold {
+    font-weight: bold;
 }
