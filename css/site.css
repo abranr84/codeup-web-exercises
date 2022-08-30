@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    color: white;
+}
+h1 {
+    font-family: "Helvetica Neve", sans-serif;
+}
+
+h2 {
+    border-bottom: 1px solid antiquewhite;
+}
+
+#prices {
+    border-bottom: 1px solid pink;
+}

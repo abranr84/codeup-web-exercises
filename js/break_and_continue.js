@@ -43,7 +43,7 @@
 
 
 
-//Example
+// Example
 // let string = "";
 // for (let i = 0; i < 8; i++) {
 //     let word = prompt("Let's make a sentence! Enter a word: ");

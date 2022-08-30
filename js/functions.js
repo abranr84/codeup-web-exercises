@@ -11,6 +11,8 @@
 // function sayHello(name){
 //     return ("Hello, " + name + "!");
 // }
+
+// const sayHello = (name) => `Hello, ${name}!`;
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -35,7 +37,7 @@
 //
 // // Don't modify the following line, it generates a random number between 1 and 3
 // // and stores it in a variable named random
-// var random = Math.floor((Math.random() * 3) + 1);
+// let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -126,6 +128,6 @@
  // *
  // * > applyDiscount(45.99, 0.12) // 40.4712
 
-// function applydiscount(price, discount) {
+// function applyDiscount(price, discount) {
 //         return price - (price * discount);
 // }
