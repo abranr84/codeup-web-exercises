@@ -221,15 +221,17 @@ function beeramid(bonus, price){
 let lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
 
 function createNames(array1, array2) {
+    var bucket =[]//counter
     for (let i = 0; i < array1.length; i++) {
-        for (let j = 0; j < array2.length; j++) {
-            return {
-                firstname: array1[i++],
-                lastname: array2[j++]
-            }
+        bucket.push({
+            firstname: array1[i],
+            lastname: array2[i]
+        })
+
         }
+    return bucket//return outside of loop
     }
-}
+
 
 //createNames(firstNames, lastNames) // returns...
 
@@ -254,9 +256,45 @@ function createNames(array1, array2) {
 
 // HINT: a solution may involve using a for loop to iterate over the length of one array to push each name object onto an array of name objects that will be returned from the function.
 
+// Write a function, getSimpleUser, that takes in a user object and returns a simplified user object.
+//
+//     Assume the following shape of the user object for the function input:
 
+//     ```
+// {
+//   firstName: '...',
+//   lastName: '...',
+//   email: '...',
+//   username: '...',
+//   password: '...'
+// }
+// ```
 
+// The shape of the output should be the following:
+//
+//     ```
+// {
+//   firstName: '...',
+//   lastName: '...',
+// }
+//
+// Regardless of the case of the first name and last name input, the output should be in all lower case.
+// (edited)
+// 4:53g
+var fred = {
+  firstName: 'Fred',
+  lastName: 'Smith',
+  email: 'fred@email.com',
+  username: 'fred123',
+  password: 'pass123'
+}
+// getSimpleUser(fred) // {firstName: 'fred', lastName: 'smith'}
 
+function getSimpleUser(object){
+    return({
+        firstName:
+    })
+}
 
 
 
