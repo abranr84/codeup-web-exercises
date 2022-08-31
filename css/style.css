@@ -1,6 +1,7 @@
 body {
     background-color: #e5ecf6;
     background-image: url(../img/background-brush.png);
+    background-size: cover;
     font-family: "Helvetica Neue", sans-serif;
 }
 
