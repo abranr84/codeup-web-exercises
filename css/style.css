@@ -1,6 +1,7 @@
 body {
     background-color: #e5ecf6;
-    background-image: url("");
+    background-image: url(../img/background-brush.png);
+    font-family: "Helvetica Neue", sans-serif;
 }
 
 h1 {
@@ -17,4 +18,33 @@ h2 {
 }
 em {
     color: #c92148;
+}
+
+ul li {
+    list-style: lower-greek;
+    padding: 1px;
+}
+
+ol li {
+    padding: 1px;
+}
+
+a:link {
+    color: #1b7ad2;
+}
+
+a:hover {
+    color: #13bbbb;
+}
+
+a:active {
+    color: green;
+}
+
+a:visited {
+    color: purple;
+}
+
+td, tr {
+    padding: 15px;
 }
