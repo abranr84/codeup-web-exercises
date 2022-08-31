@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Presentation</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../css/presentation.css">
 </head>
 <body>
-    <h3>What is a font stack and how should the best one be chosen?</h3>
+    <fieldset>
+        <legend><h3>What is a font stack and how should the best one be chosen?</h3></legend>
     <p>A font stack is a list of fonts and font keywords used to let a browser know our preferred and fallback fonts.
-        A font stack is a list of fonts in the CSS font-family declaration. The fonts are listed in order of preference that you would like them to appear in case of a problem, such as a font not loading. A font stack allows you to control the look of the fonts on the web page even if the site visitor's computer doesn't have the initial font that you called for.
-        Font names are separated by commas. You can add as many fonts as you'd like, as long as they are separated by commas. The browser will try to load the first font specified. If that fails, it will run down the line trying each font until it finds one that it can use. This example uses web-safe fonts, and a site visitor's computer likely has the Georgia font. If not, the browser will move down the stack and try the next font specified.
-        Multiple-word font names are enclosed in quotation marks.
-        A font stack usually ends with a generic font classification (serif or sans-serif). In this case, serif tells the browser to use a font that at least falls into this category if the specific fonts in the stack are unavailable.  There’s a basic formula to creating a good font stack: ‘Preferred Font’, ‘Next best thing’, ‘Something common and sorta close’, ‘Similar Web-safe’, ‘Generic font’. There’s nothing wrong with having more than one font for any of those, but try to keep your font stack reasonably short (six to ten fonts is a pretty good maximum number). </p>
-    <h3>What is the difference between serif and sans serif font?</h3>
-    <p>The decorative strokes: A serif is a decorative stroke that extends off the end of a letterform.
+        A font stack is a list of fonts in the CSS font-family declaration. The fonts are listed in order of preference that you would like them to appear in case of a problem, such as a font not loading.
+        Font names are separated by commas and multiple-word font names are enclosed in quotation marks. You can add as many fonts as you'd like, as long as they are separated by commas. The browser will try to load the first font specified. If that fails, it will run down the line trying each font until it finds one that it can use.
+        A font stack usually ends with a generic font classification (serif or sans-serif). There’s a basic formula to creating a good font stack: ‘Preferred Font’, ‘Next best thing’, ‘Something common and sorta close’, ‘Similar Web-safe’, ‘Generic font’. There’s nothing wrong with having more than one font for any of those, but try to keep your font stack reasonably short (six to ten fonts is a pretty good maximum number). </p></fieldset>
+    <fieldset>
+        <legend><h3>What is the difference between serif and <span>sans serif</span> font?</h3></legend>
+    <p>The decorative strokes: A serif is a decorative stroke that extends off the end of a letterform. <br>
+        <br>
+        Serif fonts are sometimes considered more classic or formal.<br>
+        <p class="sans">Sans-serif fonts are often considered more minimalist or casual.</p>
+        You will often find that print publications like books and newspapers will use serif fonts, while digital publications or magazines favor sans-serif fonts.
 
-        The mood: Serif fonts are sometimes considered more classic or formal, and sans-serif fonts are often considered more minimalist or casual. You will often find that print publications like books and newspapers will use serif fonts, while digital publications or magazines favor sans-serif fonts.
-
-       Some people believe that a serif font choice is better for reading text at small sizes in printed copy (like books or newspapers), while the sans-serif style is easier to read in digital mediums.</p>
+        Some people believe that a serif font choice is better for reading text at small sizes in printed copy (like books or newspapers), while the sans-serif style is easier to read in digital mediums.</p></fieldset>
 </body>
 </html>
