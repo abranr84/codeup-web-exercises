@@ -46,6 +46,13 @@ a:visited {
     color: purple;
 }
 
+table {
+    font-size: 1.2rem;
+    border: thin solid black;
+    border-collapse: collapse;
+}
+
 td, tr {
-    padding: 15px;
+    border: thin solid black;
+    padding: 10px;
 }

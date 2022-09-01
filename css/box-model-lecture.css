@@ -1,0 +1,40 @@
+body {
+    margin: 15px;
+}
+
+#main {
+    background-color: #e3dfdf;
+    color: #49b9ec;
+    text-shadow: -1px 1px 1px darkslategray;
+    box-sizing: border-box;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 15px;
+    margin-top: 70px;
+    margin-left: 50px;
+    /*margin: 15px;*/
+    outline: 5px solid #09769f;
+    box-shadow: -10px 10px 7px 5px darkslategray;
+                /*14px 14px 6px darkcyan;*/
+}
+/*padding is in between the content and the border */
+p {
+    background-color: rgba(5, 146, 199, 0.87);
+    color: #e3dbdb;
+    box-sizing: border-box;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 7px;
+    /*padding: 15px;*/
+    padding: 15px 25px;
+    /*15px top and bottom, 25px left and right*/
+    /*margin-bottom: 50px;*/
+    /*margin: auto;*/
+    margin: 75px 100px 40px 40px;
+    /*margin-right:auto;*/
+    outline: 3px solid #09769f;
+    box-shadow: -10px 10px 7px -5px darkslategray;
+    /*margin: 0 auto; - 0px top and bottom, auto left and right*/
+
+}
