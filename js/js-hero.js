@@ -25,3 +25,6 @@ let tree = "maple";
 function hello(){
     return 'Hello world!'
 }
+
+//Define two functions. The first function a should return 'Hello a!' and the second function b should return 'Hello b!'.
+
