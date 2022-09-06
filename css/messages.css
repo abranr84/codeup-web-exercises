@@ -7,29 +7,37 @@ body, html {
 }
 
 .message-info {
-    background-color: lightcyan;
+    background-color: #a8c6f6;
+    color: #5151b0;
     box-sizing: border-box;
+    padding: 10px;
     border-radius: 3px;
     margin: 5px 5px 5px 5px;
 }
 
 .message-success {
-    background-color: lightgreen;
+    background-color: #c2fdb2;
+    color: #048104;
     box-sizing: border-box;
+    padding: 10px;
     border-radius: 3px;
     margin: 5px 5px 5px 5px;
 }
 
 .message-warning {
     background-color: lightgoldenrodyellow;
+    color: #a1a13d;
     box-sizing: border-box;
+    padding: 10px;
     border-radius: 3px;
     margin: 5px 5px 5px 5px;
 }
 
 .message-error {
-    background-color: #ffa2c1;
+    background-color: #fdc6ce;
+    color: #945050;
     box-sizing: border-box;
+    padding: 10px;
     border-radius: 3px;
     margin: 5px 5px 5px 5px;
 }
