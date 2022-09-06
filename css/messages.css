@@ -12,7 +12,7 @@ body, html {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 3px;
-    margin: 5px 5px 5px 5px;
+    margin: 10px 5px 10px 5px;
 }
 
 .message-success {
@@ -21,7 +21,7 @@ body, html {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 3px;
-    margin: 5px 5px 5px 5px;
+    margin: 10px 5px 10px 5px;
 }
 
 .message-warning {
@@ -30,7 +30,7 @@ body, html {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 3px;
-    margin: 5px 5px 5px 5px;
+    margin: 10px 5px 10px 5px;
 }
 
 .message-error {
@@ -39,5 +39,5 @@ body, html {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 3px;
-    margin: 5px 5px 5px 5px;
+    margin: 10px 5px 10px 5px;
 }
